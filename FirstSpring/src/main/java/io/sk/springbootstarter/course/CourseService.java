@@ -1,4 +1,4 @@
-package io.sk.springbootstarter.topic;
+package io.sk.springbootstarter.course;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TopicService {
+public class CourseService {
 	
 	@Autowired
-	private TopicRepository topicRepository;
+	private CourseRepository courseRepository;
 
 	/*
 	 * public List<Topic> topics = new ArrayList<>(Arrays.asList( new Topic("one",
@@ -20,40 +20,40 @@ public class TopicService {
 	 * Topic("one", "manchala", "description3") ));
 	 */
 	
-	public List<Topic> getAllTopics(){
+	public List<Course> getAllCourses(String topicId){
 		//return topics;
-		List<Topic> topics = new ArrayList<>();
-		topicRepository.findAll()
-		.forEach(topics::add);
-		return topics;
+		List<Course> courses = new ArrayList<>();
+		courseRepository.findByTopicId(topicId)
+		.forEach(courses::add);
+		return courses;
 	}
 	
-	public Optional<Topic> getTopic(String id) {
+	public Optional<Course> getCourse(String id) {
 		//return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-		return  topicRepository.findById(id);
+		return  courseRepository.findById(id);
 	}
 
-	public void addTopic(Topic topic) {
+	public void addCourse(Course course) {
 		// TODO Auto-generated method stub
 		//topics.add(topic);
-		topicRepository.save(topic);
+		courseRepository.save(course);
 	}
 
-	public void updateTopic(String id, Topic topic) {
+	public void updateCourse(Course course) {
 		// TODO Auto-generated method stub
 		/*
 		 * for(int i = 0;i<topics.size();i++) { Topic t = topics.get(i);
 		 * if(t.getId().equals(id)) { topics.set(i,topic); return; } }
 		 */
-		topicRepository.save(topic);
+		courseRepository.save(course);
 	}
 
-	public void deleteTopic(String id) {
+	public void deleteCourse(String id) {
 		// TODO Auto-generated method stub
 		/*
 		 * for(int i = 0;i<topics.size();i++) { Topic t = topics.get(i);
 		 * if(t.getId().equals(id)) { topics.remove(t); } }
 		 */
-		topicRepository.deleteById(id);
+		courseRepository.deleteById(id);
 	}
 }

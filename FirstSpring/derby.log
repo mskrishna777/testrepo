@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+Thu May 07 18:16:04 EDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-f135-c28a-000000227ce8 
+on database directory memory:C:\Users\saikrishna.manchala\git\repository\FirstSpring\testdb with class loader sun.misc.Launcher$AppClassLoader@21d3e0dc 
+Loaded from file:/C:/Users/saikrishna.manchala/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Eclipse OpenJ9
+java.runtime.version=1.8.0_202-b08
+java.fullversion=1.8.0_202-b08
+JRE 1.8.0 Windows 10 amd64-64-Bit Compressed References 20190205_265 (JIT enabled, AOT enabled)
+OpenJ9   - 90dd8cb40
+OMR      - d2f4534b
+JCL      - d002501a90 based on jdk8u202-b08
+user.dir=C:\Users\saikrishna.manchala\git\repository\FirstSpring
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
